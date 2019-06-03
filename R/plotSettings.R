@@ -32,12 +32,12 @@ gains_chart <- function(data, title, xlabel, ylabel){
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
        geom_line(aes(y = value, colour = variable),
-                 size = 1) +
+                 size = 1.2) +
        geom_line(data = data[[1]],
                  aes(x = Cum.Records.Pct, y = Random.Response.Pct, lty='Random'),
                  colour = "black",
                  lty = "longdash",
-                 size = 1) +
+                 size = 1.2) +
        scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100)) +
        scale_y_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
 
@@ -170,13 +170,13 @@ profit_gains_chart <- function(data, title, xlabel, ylabel){
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_line(aes(y = value, colour = variable),
-              size = 1) +
+              size = 1.2) +
     geom_hline(aes(yintercept = 0), colour = "grey", lty = "dashed") +
     geom_line(data = data[[1]],
               aes(x = Cum.Records.Pct, y = Cum.Random.Profit, lty = "Random"),
               colour = "black",
               lty = "longdash",
-              size = 1) +
+              size = 1.2) +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
 
   # Create title
@@ -434,7 +434,7 @@ lift_chart <- function(data, title, xlabel, ylabel){
   # Create ggplot object(line chart)
   p <- ggplot(plot_table, aes(colour=variable, y = value, x = Cum.Records.Pct)) +
     geom_line(aes(y = value, colour = variable),
-              size = 1) +
+              size = 1.2) +
     geom_hline(aes(yintercept = 1, lty = "Random"),
                colour = "black",
                lty = "longdash") +
@@ -568,7 +568,7 @@ profit_lift_chart <- function(data, title, xlabel, ylabel){
                colour = "black",
                lty = "longdash") +
     geom_line(aes(y = value, colour = variable),
-              size = 1) +
+              size = 1.2) +
     scale_x_continuous(breaks=c(0,10,20,30,40,50,60,70,80,90,100))
 
   # Create title
